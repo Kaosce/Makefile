@@ -1,11 +1,11 @@
 ##
-## Makefile for Makefile in /home/TiphaineLaurent/CPE_2016_matchstick
+## Makefile for Makefile in <path>
 ## 
-## Made by Tiphaine LAURENT
-## Login   <TiphaineLaurent@epitech.net>
+## Made by <your name>
+## Login   <your login>
 ## 
 ## Started on  Wed Feb 15 11:38:54 2017 Tiphaine LAURENT
-## Last update Wed Feb 22 13:30:41 2017 Tiphaine LAURENT
+## Last update Wed Feb 22 16:54:04 2017 Tiphaine LAURENT
 ##
 
 CC	=	@gcc
@@ -17,7 +17,7 @@ LDFLAGS	+=	-lmy -lprintf -L./libs
 
 RM	=	@rm -f
 
-NAME	=	matchstick
+NAME	=	
 
 DIR	=	./srcs/
 SRCS	=	main.c

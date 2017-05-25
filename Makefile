@@ -1,43 +1,43 @@
 ##
-## Makefile for Makefile in <path>
+## Makefile for Makefile in /home/TiphaineLaurent/Makefile
 ## 
-## Made by <your name>
-## Login   <your login>
+## Made by Tiphaine LAURENT
+## Login   <TiphaineLaurent@epitech.net>
 ## 
-## Started on  Wed Feb 15 11:38:54 2017 Tiphaine LAURENT
-## Last update Wed Feb 22 16:54:04 2017 Tiphaine LAURENT
+## Started on  Thu May 25 16:01:57 2017 Tiphaine LAURENT
+## Last update Thu May 25 16:02:22 2017 Tiphaine LAURENT
 ##
 
-CC	=	@gcc
-CFLAGS	+=	-W -Wall
-#CFLAGS	+=	-ansi -pedantic
-CFLAGS	+=	-I./includes
+CC		=	gcc
+CFLAGS		=	-W -Wall
+#CFLAGS		+=	-ansi -pedantic
+CPPFLAGS	=	-I./includes
 
-LDFLAGS	+=	-lmy -lprintf -L./libs
+LDFLAGS		=	-lmy -lprintf -L./libs
 
-RM	=	@rm -f
+RM		=	rm -f
 
-NAME	=	
+NAME		=	
 
-DIR	=	./srcs/
-SRCS	=	main.c
+DIR		=	./srcs/
+SRCS		=	main.c
 
-OBJS	=	$(foreach SRCS,$(SRCS),$(DIR)$(SRCS:.c=.o))
+OBJS		=	$(foreach SRCS,$(SRCS),$(DIR)$(SRCS:.c=.o))
 
 
-all:	$(NAME)
+all:		$(NAME)
 
-$(NAME):$(OBJS)
-	$(CC) -o $(NAME) $(OBJS) $(LDFLAGS) $(CFLAGS)
+$(NAME):	$(OBJS)
+		$(CC) -o $(NAME) $(OBJS) $(LDFLAGS)
 
 create:
-	@mkdir srcs includes libs
+		@mkdir srcs includes libs
 clean:
-	$(RM) $(OBJS)
+		$(RM) $(OBJS)
 
-fclean:	clean
-	$(RM) $(NAME)
+fclean:		clean
+		$(RM) $(NAME)
 
-re:	fclean all
+re:		fclean all
 
-.PHONY:	all clean fclean re
+.PHONY:		all clean fclean re

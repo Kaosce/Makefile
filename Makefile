@@ -9,17 +9,18 @@
 ##
 
 CC		=	gcc
-CFLAGS		=	-W -Wall
-#CFLAGS		+=	-ansi -pedantic
-CPPFLAGS	=	-I./includes
+CFLAGS		=	-W -Wall -Wextra -Werror
+CFLAGS		+=	-ansi -pedantic					#Try to comment this line if you have trouble compiling.
+CPPFLAGS	=	-I include
 
-LDFLAGS		=	-lmy -lprintf -L./libs
+LDFLAGS		=	-l my -L libs
+LDFLAGS		+=	-l printf -L libs
 
 RM		=	rm -f
 
 NAME		=	
 
-DIR		=	./srcs/
+DIR		=	src/
 SRCS		=	main.c
 
 OBJS		=	$(foreach SRCS,$(SRCS),$(DIR)$(SRCS:.c=.o))
@@ -31,7 +32,7 @@ $(NAME):	$(OBJS)
 		$(CC) -o $(NAME) $(OBJS) $(LDFLAGS)
 
 create:
-		@mkdir srcs includes libs
+		@mkdir src include lib
 clean:
 		$(RM) $(OBJS)
 

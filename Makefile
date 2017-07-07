@@ -9,8 +9,10 @@
 ##
 
 CC		=	gcc
-CFLAGS		=	-W -Wall -Wextra -Werror
+CFLAGS		=	-W -Wall -Wextra -Werror -Wshadow
 CFLAGS		+=	-ansi -pedantic					#Try to comment this line if you have trouble compiling.
+CFLAGS		+=	-fstack-protector-strong
+
 CPPFLAGS	=	-I include
 
 LDFLAGS		=	-l my -L libs
